@@ -1,6 +1,6 @@
 {% extends 'global/base.html' %}
 
-{% block title %}Home |{% endblock title %}
+{% block title %}{{title}}{% endblock title %}
 
 {% block content %}
     <main class="main-content-container">
@@ -8,11 +8,7 @@
             {% for recipe in recipes %}
             {% include 'recipes/partials/recipe.html' %}
 
-            {% empty %}
-            <div class="center">
-                <h1> Coming soon!</h1>
-            </div>
             {% endfor %}
-        </div>
+        </div> 
     </main>
 {% endblock content %}
